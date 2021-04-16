@@ -1,28 +1,46 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Linq;
+using static System.Console;
+using static System.Convert;
 
-namespace VariableDefinition
+namespace ControlFlow
 {
   class Program
   {
     static void Main(string[] args)
     {
-      /* variable initialization */
-      int a = 10, b = 20, c0, c1;
-      double c2, c3, c4, c5;
-      string person;
+      WriteLine("if statement example.");
+      Write("Enter a character: ");
 
-      /* variable reassignment */
-      c0 = b + a; /* {0} */
-      c1 = b - a; /* {1} */
-      c2 = b / a; /* {2} */
-      c3 = b * a; /* {3} */
-      c4 = b % a; /* {4} */
-      c5 = Math.Pow(b, a);  /* {5} */
-      person = "rick";  /* {6} */
+      /* cast the unspecified input datatype to a character datatype */
+      char inputChar = System.Convert.ToChar(ReadLine());
+      char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
 
-      /* 0,1,2 are elements - think of it as indexes */
-      Console.WriteLine("b + a = {0}, b - a = {1}, b / a = {2}, b*a={3}, b%a={4}" + "Math.pow(b,a)={5}, person = {6}", c0, c1, c2, c3, c4, c5, person);
+      /* here is the flow control */
+      if (char.ToLower(inputChar) == 'a')
+      {
+        WriteLine("Character " + inputChar + " is a vowel.");
+      }
+      else if (char.ToLower(inputChar) == 'e')
+      {
+        WriteLine("Character " + inputChar + " is not a vowel.");
+      }
+      else if (char.ToLower(inputChar) == 'i')
+      {
+        WriteLine("Character " + inputChar + " is not a vowel.");
+      }
+      else if (char.ToLower(inputChar) == 'o')
+      {
+        WriteLine("Character " + inputChar + " is not a vowel.");
+      }
+      else if (char.ToLower(inputChar) == 'u')
+      {
+        WriteLine("Character " + inputChar + " is not a vowel.");
+      }
+      else
+      {
+        WriteLine("Character " + inputChar + " is not a vowel.");
+      }
     }
   }
-
 }
