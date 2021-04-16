@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using static System.Console;
-using static System.Convert;
 
 namespace ControlFlow
 {
@@ -9,40 +7,21 @@ namespace ControlFlow
   {
     static void Main(string[] args)
     {
-      WriteLine("if statement example.");
-      Write("Enter a character: ");
 
-      /* cast the unspecified input datatype to a character datatype */
-      char inputChar = System.Convert.ToChar(ReadLine());
-      char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+      Random r = new Random();
+      int newRandom, counter = 0;
 
-      /* switch is comparable to if ... else if ... else */
-      switch (inputChar)
+      while (counter < 5)
       {
-        case 'a':
-          WriteLine("The input character was an a.");
-          break;
+        /* get a random number between 0 and 99 inclusive */
+        newRandom = r.Next(0, 100);
 
-        case 'e':
-          WriteLine("The input character was an e.");
-          break;
+        WriteLine("Random number " + counter + " was " + newRandom);
 
-        case 'i':
-          WriteLine("The input character was an i.");
-          break;
-
-        case 'o':
-          WriteLine("The input character was an o.");
-          break;
-
-        case 'u':
-          WriteLine("The input character was a u.");
-          break;
-
-        default:
-          WriteLine("The input character was not a vowel.");
-          break;
+        /* increment our counter */
+        counter += 1;
       }
+      ReadLine();
     }
   }
 }
