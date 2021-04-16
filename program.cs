@@ -16,30 +16,32 @@ namespace ControlFlow
       char inputChar = System.Convert.ToChar(ReadLine());
       char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
 
-      /* here is the flow control */
-      if (char.ToLower(inputChar) == 'a')
+      /* switch is comparable to if ... else if ... else */
+      switch (inputChar)
       {
-        WriteLine("Character " + inputChar + " is a vowel.");
-      }
-      else if (char.ToLower(inputChar) == 'e')
-      {
-        WriteLine("Character " + inputChar + " is not a vowel.");
-      }
-      else if (char.ToLower(inputChar) == 'i')
-      {
-        WriteLine("Character " + inputChar + " is not a vowel.");
-      }
-      else if (char.ToLower(inputChar) == 'o')
-      {
-        WriteLine("Character " + inputChar + " is not a vowel.");
-      }
-      else if (char.ToLower(inputChar) == 'u')
-      {
-        WriteLine("Character " + inputChar + " is not a vowel.");
-      }
-      else
-      {
-        WriteLine("Character " + inputChar + " is not a vowel.");
+        case 'a':
+          WriteLine("The input character was an a.");
+          break;
+
+        case 'e':
+          WriteLine("The input character was an e.");
+          break;
+
+        case 'i':
+          WriteLine("The input character was an i.");
+          break;
+
+        case 'o':
+          WriteLine("The input character was an o.");
+          break;
+
+        case 'u':
+          WriteLine("The input character was a u.");
+          break;
+
+        default:
+          WriteLine("The input character was not a vowel.");
+          break;
       }
     }
   }
