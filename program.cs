@@ -1,20 +1,18 @@
 ﻿using System;
 using static System.Console;
 
-public class Program
+namespace AllAboutStrings
 {
-  public static void Main()
+
+  class Program
   {
-    int[,] twodim = new int[,] { { 1, 2, 3 }, { 4, 5, 6 } };
 
-    int dim1 = twodim.GetLength(0);
-    int dim2 = twodim.GetLength(1);
-
-    for (int i = 0; i < dim1; i++)
+    static void Main(string[] args)
     {
-      for (int j = 0; j < dim2; j++)
+      string myName = "sam blank";
+      for (int i = 0; i <= myName.Length; i++)
       {
-        WriteLine("twodim[{0}, {1}] = {2}", i, j, twodim[i, j]);
+        WriteLine("Character {0} in myName is {1}", i, myName[i]);
       }
     }
   }
